@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Card Generator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -13,17 +13,45 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <script src="src/app.js"></script>
+    <div class="container text-center">
+      <div class="row">
+        <div id="cardSize" class="col-12">
+          <form id="cardSizeForm" class="m-5">
+            <label for="height">Card Height</label>
+            <input type="text" id="heightInput" name="height" />
+            <label for="height">Card Weigth</label>
+            <input type="text" id="widthInput" name="width" />
+          </form>
+          <button onClick="window.location.reload();" class="btn btn-light">
+            Generate a New Card
+          </button>
+          <button id="tenSecButton" class="btn btn-light">
+            Generate a Card Every 10 sec
+          </button>
+          <button id="stopTenSecButton" class="btn btn-light">
+            Stop 10 sec Reload
+          </button>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div id="cardBody" class="card m-5">
+          <div
+            id="randomCardSpadeTop"
+            class="position-absolute top-0 start-0 ms-4"
+          ></div>
+          <div id="randomCardNum"></div>
+          <div
+            id="randomCardSpadeBottom"
+            class="position-absolute bottom-0 end-0 me-4"
+          ></div>
+        </div>
+      </div>
+      <div class="bottom p-4">
+        Made with 💙 by
+        <a href="https://github.com/lvvargas-aponte">lvvargas-aponte</a>
       </div>
     </div>
+    <script type="text/javascript" src="src/app.js"></script>
   </body>
 </html>

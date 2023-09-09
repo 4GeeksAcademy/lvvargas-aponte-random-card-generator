@@ -1,1 +1,22 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: darkgreen;
+  color: white;
+}
+
+#cardBody {
+  background-color: white;
+  justify-content: center;
+  width: 325px;
+  height: 400px;
+  font-size: 75px;
+}
+
+a {
+  color: orange;
+}
+
+#randomCardSpadeBottom {
+  transform: rotate(3.142rad);
+}
